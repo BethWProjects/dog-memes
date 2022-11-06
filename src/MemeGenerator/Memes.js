@@ -11,7 +11,7 @@ class Memes extends Component {
         this.state = {
             topText: '',
             bottomText: '',
-            memes: "https://i.imgflip.com/30b1gx.jpg",
+            randomImg: 'http://i.imgflip.com/1bij.jpg',
             imgMemes: []
         }
     }
@@ -20,37 +20,46 @@ class Memes extends Component {
         fetchMemes()
         .then(response => response.json())
         .then(response => {
-            const {memes} = response.data
+            const { memes } = response.data
+            console.log(memes)
             this.setState({ imgMemes: memes})
         })
     }
 
     handleChange = (event) => {
-        this.setState({ [event.target.name]: event.target.value})
+        const {name, value } = event.target
+        this.setState({ [name]: value})
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault()
+        const randomNumber = Math.floor(Math.random() * this.state.imgMemes.length)
+        const randomMemeImg = this.state.imgMemes[randomNumber].url
+        this.setState({ randomImg: randomMemeImg})
     }
 
     render(){
         return(
-            <div className='meme-container'>
-                <form>
+            <div className='meme-container' >
+                <form onSubmit={this.handleSubmit}>
                     <input
                         type="text"
                         name='topText'
                         placeholder='Title'
                         value={this.state.topText}
-                        onChange={event => this.handleChange(event)}
+                        onChange={this.handleChange}
                     />
                     <input 
                         type='text'
                         name='bottomText'
                         placeholder='Description'
                         value={this.state.bottomText}
-                        onChange={event => this.handleChange(event)}
+                        onChange={this.handleChange}
                     />
                     <button>Submit</button>
                 </form>
                 <div className='meme-display'>
-                    <img src={this.state.memes} className="random-img" alt="random meme images" />
+                    <img src={this.state.randomImg} className="random-img" alt="random meme images" />
                     <h2 className='top'>{this.state.topText}</h2>
                     <h2 className='bottom'>{this.state.bottomText}</h2>
                 </div>
