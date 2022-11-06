@@ -1,0 +1,39 @@
+.meme-container {
+    text-align: center;
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+.meme-display {
+    display: flex;
+    justify-content: center;
+}
+
+.meme-container > .random-img {
+    width: 100%;
+}
+
+.random-img {
+    height: 50vh;
+    width: 25vw;
+}
+
+.meme-container > h2 {
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.top {
+    position: absolute;
+    top: 0;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+}
+

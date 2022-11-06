@@ -1,0 +1,24 @@
+.nav-container {
+    background-color: aquamarine;
+}
+
+.header {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-icon {
+    width: 12vw;
+    height: 12vh;
+}
+
+.title {
+    font-size: 150%;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    margin-left: 10px;
+}
