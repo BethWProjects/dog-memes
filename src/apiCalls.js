@@ -1,14 +1,18 @@
 
-// const apiKey = process.env.REACT_APP_API_KEY
 
 const fetchMemes = () => {
     return fetch('https://api.imgflip.com/get_memes')
 }
+const fetchHappyDog = () => {
+    return fetch('https://happy-dogs.herokuapp.com/api/v1/happy_dog')
+}
 
-// const fetchMemes = () => {
-//     return fetch('https://api.thedogapi.com/v1/images/search', {
-//         headers: {'x-api-key': apiKey}
-//     })
-// }
+const fetchSillyDog = () => {
+    return fetch('https://happy-dogs.herokuapp.com/api/v1/silly_dog')
+}
 
-export { fetchMemes }
+const fetchTiredDog = () => {
+    return fetch('https://happy-dogs.herokuapp.com/api/v1/tired_dog')
+}
+
+export { fetchMemes, fetchHappyDog, fetchSillyDog, fetchTiredDog }
