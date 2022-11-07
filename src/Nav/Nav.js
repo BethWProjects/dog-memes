@@ -5,9 +5,9 @@ const Nav = () => {
         <header>
             <nav className="navbar">
                 <ul>
-                    <li><a href="dogs">Dogs</a></li>
-                    <li><a href="cats">Cats</a></li>
-                    <li><a href="random">Random</a></li>
+                    <li><a href="happy_dog">Happy Dog</a></li>
+                    <li><a href="sad_dog">Sad Dog</a></li>
+                    <li><a href="tired_dog">Random</a></li>
                 </ul>
             </nav>
         </header>

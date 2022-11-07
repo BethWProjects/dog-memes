@@ -1,5 +1,5 @@
-const catData = {
-    cats : [
+const happyData = {
+    happyDog : [
       {
         id: 1,
         image: "",

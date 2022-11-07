@@ -3,8 +3,8 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
 
 //import Routes
-import Dogs from './routes/Dogs';
-import Cats from './routes/Cats';
+import SadDog from './routes/Dogs';
+import HappyDog from './routes/HappyDog';
 import Random from './routes/Random';
 
 //import components
@@ -17,9 +17,9 @@ function App() {
     <Router>
       <Nav />
       <Routes>
-        <Route path='/dogs' element={<Dogs />} />
-        <Route path='/cats' element={<Cats />} />
-        <Route path='/random' element={<Random />} />
+        <Route path='/sad_dog' element={<SadDog />} />
+        <Route path='/happy_dog' element={<HappyDog />} />
+        <Route path='/tired_dog' element={<Random />} />
       </Routes>
     </Router>
     // <div>
